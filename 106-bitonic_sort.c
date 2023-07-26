@@ -30,7 +30,8 @@ void swap_ints(int *a, int *b)
  * @seq: The size of the sequence to sort.
  * @flow: The direction to sort in.
  */
-void bitonic_merge(int *array, size_t size, size_t start, size_t seq, char flow)
+void bitonic_merge(int *array, size_t size,
+		size_t start, size_t seq, char flow)
 {
 	size_t i, jump = seq / 2;
 
