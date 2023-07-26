@@ -30,20 +30,22 @@ int _strcmp(const char *str1, const char *str2)
 int get_card_position(deck_node_t *node)
 {
 	int value;
-	const char *card_value = node->card->value;
 
-	if (_strcmp(card_value, "Ace"))
-		value = 1;
-	else if (_strcmp(card_value, "10"))
-		value = 10;
-	else if (_strcmp(card_value, "Jack"))
-		value = 11;
-	else if (_strcmp(card_value, "Queen"))
-		value = 12;
-	else if (_strcmp(card_value, "King"))
-		value = 13;
-
-	value += node->card->kind * 13;
+	value = (*node).card->value[0] - '0';
+	if (value < 50 || value > 57)
+	{
+		if (_strcmp((*node).card->value, "Ace") == 1)
+			value = 1;
+		else if (_strcmp((*node).card->value, "10") == 1)
+			value = 10;
+		else if (_strcmp((*node).card->value, "Jack") == 1)
+			value = 11;
+		else if (_strcmp((*node).card->value, "Queen") == 1)
+			value = 12;
+		else if (_strcmp((*node).card->value, "King") == 1)
+			value = 13;
+	}
+	value += (*node).card->kind * 13;
 	return (value);
 }
 
