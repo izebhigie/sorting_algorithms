@@ -1,9 +1,9 @@
 #include "deck.h"
 #include <stdio.h>
 /**
- *_strcmp - compare two strings
- *@str1: string
- *@str2: string
+ *_strcmp - This compares two strings
+ *@str1: strings
+ *@str2: strings
  *Return: 1 str1 and str2 is equal, 0 they are not equal
  */
 int _strcmp(const char *str1, const char *str2)
@@ -23,7 +23,8 @@ int _strcmp(const char *str1, const char *str2)
 	return (0);
 }
 /**
- * get_card_position - return the position based on card you put in
+ * get_card_position - This returns the position based
+ * on card you put in
  * @node: represent the card
  * Return: return the card position
  */
@@ -50,7 +51,7 @@ int get_card_position(deck_node_t *node)
 }
 
 /**
- *swap_card - swap a card for his previous one
+ *swap_card - This swaps a card for his previous one
  *@card: card
  *@deck: card deck
  *Return: return a pointer to a card which was enter it
